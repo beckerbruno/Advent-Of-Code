@@ -1,0 +1,28 @@
+--- Dia 3: Relações de transmissão ---
+Você e o Elfo eventualmente chegam a uma estação elevatória de gôndola ; ele diz que o teleférico o levará até a fonte de água , mas isso é o máximo que ele pode levar. Você entra.
+
+Não demora muito para encontrar as gôndolas, mas parece haver um problema: elas não estão se movendo.
+
+"Aaah!"
+
+Você se vira e vê um elfo um pouco gorduroso com uma chave inglesa e uma expressão de surpresa. "Desculpe, eu não estava esperando ninguém! O teleférico não está funcionando agora; ainda vai demorar um pouco até que eu possa consertar." Você se oferece para ajudar.
+
+O engenheiro explica que parece faltar uma peça do motor, mas ninguém consegue descobrir qual. Se você puder somar todos os números das peças no esquema do motor, será fácil descobrir qual peça está faltando.
+
+O esquema do motor (sua entrada do quebra-cabeça) consiste em uma representação visual do motor. Existem muitos números e símbolos que você realmente não entende, mas aparentemente qualquer número adjacente a um símbolo , mesmo na diagonal, é um "número de peça" e deve ser incluído na sua soma. (Os pontos ( .) não contam como símbolo.)
+
+Aqui está um exemplo de esquema do motor:
+
+467..114..
+...*......
+..35..633.
+......#...
+617*......
+.....+.58.
+..592.....
+......755.
+...$.*....
+.664.598..
+Neste esquema, dois números não são números de peça porque não são adjacentes a um símbolo: 114(canto superior direito) e 58(meio direito). Todos os outros números são adjacentes a um símbolo e também um número de peça; a soma deles é 4361.
+
+Claro, o esquema real do motor é muito maior. Qual é a soma de todos os números de peça no esquema do motor?
