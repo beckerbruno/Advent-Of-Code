@@ -1,5 +1,6 @@
 --- Dia 3: Relações de transmissão ---
-Você e o Elfo eventualmente chegam a uma estação elevatória de gôndola ; ele diz que o teleférico o levará até a fonte de água , mas isso é o máximo que ele pode levar. Você entra.
+Você e o Elfo eventualmente chegam a uma estação elevatória de gôndola ; ele diz que o teleférico o levará até a fonte de água , 
+mas isso é o máximo que ele pode levar. Você entra.
 
 Não demora muito para encontrar as gôndolas, mas parece haver um problema: elas não estão se movendo.
 
