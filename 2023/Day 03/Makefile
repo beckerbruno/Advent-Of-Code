@@ -14,4 +14,4 @@ run:			${APPLICATIVO}
 	@./${APPLICATIVO}
 
 clean: 			
-	del ${DASHOES} ${APPLICATIVO}
+	del ${DASHOES} ${APPLICATIVO}.exe
