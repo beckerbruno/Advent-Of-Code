@@ -34,16 +34,14 @@ A primeira metade deste quebra-cabeça está completa! Ele fornece uma estrela d
 
 
 --- Parte dois ---
-O engenheiro encontra a peça que falta e a instala no motor! Conforme o motor ganha vida, você pula na gôndola mais próxima, finalmente pronto para subir até a fonte de água.
-
-Mas você não parece estar indo muito rápido. Talvez algo ainda esteja errado? Felizmente, a gôndola tem um telefone com a inscrição "help", então você atende e o engenheiro atende.
-
-Antes que você possa explicar a situação, ela sugere que você olhe pela janela. Lá está o maquinista, segurando um telefone em uma mão e acenando com a outra. Você está indo tão devagar que nem saiu da estação. Você sai da gôndola.
-
-A peça faltante não era o único problema - uma das engrenagens do motor está errada. Uma engrenagem é qualquer *símbolo que é adjacente a exatamente dois números de peça . Sua relação de engrenagem é o resultado da multiplicação desses dois números.
-
-Desta vez, você precisa encontrar a relação de transmissão de cada engrenagem e somá-las para que o engenheiro possa descobrir qual engrenagem precisa ser substituída.
-
+O engenheiro encontra a peça que falta e a instala no motor! Conforme o motor ganha vida, você pula na gôndola mais próxima, 
+finalmente pronto para subir até a fonte de água. Mas você não parece estar indo muito rápido. Talvez algo ainda esteja errado?
+Felizmente, a gôndola tem um telefone com a inscrição "help", então você atende e o engenheiro atende. Antes que você possa explicar
+a situação, ela sugere que você olhe pela janela. Lá está o maquinista, segurando um telefone em uma mão e acenando com a outra. 
+Você está indo tão devagar que nem saiu da estação. Você sai da gôndola. A peça faltante não era o único problema - uma das 
+engrenagens do motor está errada. Uma engrenagem é qualquer *símbolo que é adjacente a exatamente dois números de peça. 
+Sua relação de engrenagem é o resultado da multiplicação desses dois números. Desta vez, você precisa encontrar a relação de 
+transmissão de cada engrenagem e somá-las para que o engenheiro possa descobrir qual engrenagem precisa ser substituída.
 Considere o mesmo esquema do motor novamente:
 
 467..114..
@@ -56,6 +54,7 @@ Considere o mesmo esquema do motor novamente:
 ......755.
 ...$.*....
 .664.598..
-Neste esquema, há duas engrenagens. A primeira está no canto superior esquerdo; ela tem números de peça 467e 35, então sua relação de engrenagem é 16345. A segunda engrenagem está no canto inferior direito; sua relação de engrenagem é 451490. (O *adjacente a não617 é uma engrenagem porque é adjacente a apenas um número de peça.) Somando todas as relações de engrenagem produz .467835
-
+Neste esquema, há duas engrenagens. A primeira está no canto superior esquerdo; ela tem números de peça 467e 35, então sua relação 
+de engrenagem é 16345. A segunda engrenagem está no canto inferior direito; sua relação de engrenagem é 451490. (O *adjacente a 
+não617 é uma engrenagem porque é adjacente a apenas um número de peça.) Somando todas as relações de engrenagem produz .467835
 Qual é a soma de todas as relações de transmissão no esquema do seu motor?
