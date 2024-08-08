@@ -1,0 +1,41 @@
+--- Dia 6: Espere por isso ---
+A balsa rapidamente leva você através de Island Island. Depois de perguntar por aí, você descobre que normalmente há uma grande pilha de areia em algum lugar aqui perto, mas você não vê nada além de muita água e a pequena ilha onde a balsa atracou.
+
+Enquanto você tenta descobrir o que fazer em seguida, você percebe um pôster em uma parede perto do cais da balsa. "Corridas de barco! Abertas ao público! O grande prêmio é uma viagem com todas as despesas pagas para a Ilha Deserta !" Deve ser de lá que vem a areia! O melhor de tudo é que as corridas de barco começam em apenas alguns minutos.
+
+Você consegue se inscrever como competidor nas corridas de barco bem a tempo. O organizador explica que não é realmente uma corrida tradicional - em vez disso, você terá um tempo fixo durante o qual seu barco tem que viajar o mais longe que puder, e você ganha se seu barco for o mais longe.
+
+Como parte da inscrição, você recebe uma folha de papel (sua entrada de quebra-cabeça) que lista o tempo permitido para cada corrida e também a melhor distância já registrada naquela corrida. Para garantir que você ganhe o grande prêmio, você precisa ter certeza de que irá mais longe em cada corrida do que o atual recordista.
+
+O organizador leva você até a área onde as corridas de barco são realizadas. Os barcos são muito menores do que você esperava - na verdade, são barcos de brinquedo , cada um com um grande botão no topo. Segurar o botão carrega o barco , e soltar o botão permite que o barco se mova . Os barcos se movem mais rápido se o botão for pressionado por mais tempo, mas o tempo gasto segurando o botão conta no tempo total da corrida. Você só pode segurar o botão no início da corrida, e os barcos não se movem até que o botão seja solto.
+
+Por exemplo:
+
+Time:      7  15   30
+Distance:  9  40  200
+Este documento descreve três raças:
+
+A primeira corrida dura 7 milissegundos. A distância recorde nesta corrida é de 9 milímetros.
+A segunda corrida dura 15 milissegundos. A distância recorde nesta corrida é de 40 milímetros.
+A terceira corrida dura 30 milissegundos. A distância recorde nesta corrida é de 200 milímetros.
+Seu barco de brinquedo tem uma velocidade inicial de zero milímetros por milissegundo . Para cada milissegundo inteiro que você gasta no início da corrida segurando o botão, a velocidade do barco aumenta em um milímetro por milissegundo .
+
+Então, como a primeira corrida dura 7 milissegundos, você só tem algumas opções:
+
+Não segure o botão de forma alguma (isto é, segure-o por 0milissegundos ) no início da corrida. O barco não se moverá; ele terá viajado 0milímetros até o final da corrida.
+Segure o botão por 1milissegundos no início da corrida. Então, o barco viajará a uma velocidade de 1milímetro por milissegundo por 6 milissegundos, atingindo uma distância total percorrida de 6milímetros .
+Segure o botão por 2milissegundos , dando ao barco uma velocidade de 2milímetros por milissegundo. Ele então terá 5 milissegundos para se mover, alcançando uma distância total de 10milímetros .
+Segure o botão por 3milissegundos . Após os 4 milissegundos restantes de tempo de viagem, o barco terá se movido 12milímetros .
+Segure o botão por 4milissegundos . Após os 3 milissegundos restantes de tempo de viagem, o barco terá se movido 12milímetros .
+Segure o botão por 5milissegundos , fazendo com que o barco percorra um total de 10milímetros .
+Segure o botão por 6milissegundos , fazendo com que o barco percorra um total de 6milímetros .
+Segure o botão por 7milissegundos . Essa é a duração total da corrida. Você nunca solta o botão. O barco não pode se mover até que você solte o botão. Certifique-se de soltar o botão para que o barco se mova. 0milímetros .
+Como o recorde atual para esta corrida é de 9milímetros, existem 4diferentes maneiras de vencer: você pode segurar o botão por 2, 3, 4ou 5milissegundos no início da corrida.
+
+Na segunda corrida, você poderia segurar o botão por pelo menos 4milissegundos e no máximo 11milissegundos e bater o recorde, um total de 8maneiras diferentes de vencer.
+
+Na terceira corrida, você poderia segurar o botão por pelo menos 11milissegundos e não mais que 19milissegundos e ainda assim bater o recorde, um total de 9maneiras pelas quais você poderia vencer.
+
+Para ver quanta margem de erro você tem, determine o número de maneiras pelas quais você pode bater o recorde em cada corrida; neste exemplo, se você multiplicar esses valores, obterá 288( 4* 8* 9).
+
+Determine o número de maneiras pelas quais você poderia bater o recorde em cada corrida. O que você obtém se multiplicar esses números?

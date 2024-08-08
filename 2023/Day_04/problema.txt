@@ -1,0 +1,33 @@
+--- Dia 4: Raspadinhas ---
+A gôndola leva você para cima. Estranhamente, porém, o chão não parece estar vindo com você; você não está escalando uma montanha. Conforme o círculo de Snow Island recua abaixo de você, uma nova massa de terra inteira aparece de repente acima de você! A gôndola leva você para a superfície da nova ilha e cambaleia para dentro da estação.
+
+Ao sair da gôndola, a primeira coisa que você nota é que o ar aqui é muito mais quente do que era em Snow Island. Também é bem úmido . É aqui que fica a fonte de água?
+
+A próxima coisa que você nota é um elfo sentado no chão do outro lado da estação, no que parece ser uma pilha de cartas quadradas coloridas.
+
+"Oh! Olá!" O Elfo corre até você, animado. "Como posso ser útil?" Você pergunta sobre fontes de água.
+
+"Não tenho certeza; eu só opero o teleférico. Isso parece algo que teríamos, no entanto - afinal, esta é a Ilha Island ! Aposto que o jardineiro saberia. Ele está em uma ilha diferente, no entanto - er, do tipo pequeno cercado por água, não do tipo flutuante. Nós realmente precisamos inventar um esquema de nomenclatura melhor. Vou te dizer uma coisa: se você puder me ajudar com algo rápido, eu te empresto meu barco e você pode ir visitar o jardineiro. Ganhei todos esses cartões de raspadinha de presente, mas não consigo descobrir o que ganhei."
+
+O Elfo leva você até a pilha de cartões coloridos. Lá, você descobre dezenas de raspadinhas, todas com a cobertura opaca já raspada. Pegando uma, parece que cada cartão tem duas listas de números separados por uma barra vertical ( |): uma lista de números vencedores e, em seguida, uma lista de números que você tem . Você organiza as informações em uma tabela (sua entrada de quebra-cabeça).
+
+Até onde o Elfo conseguiu descobrir, você tem que descobrir qual dos números que você tem aparece na lista de números vencedores . A primeira combinação faz a carta valer um ponto e cada combinação depois da primeira dobra o valor do ponto daquela carta.
+
+Por exemplo:
+
+Card 1: 41 48 83 86 17 | 83 86  6 31 17  9 48 53
+Card 2: 13 32 20 16 61 | 61 30 68 82 17 32 24 19
+Card 3:  1 21 53 59 44 | 69 82 63 72 16 21 14  1
+Card 4: 41 92 73 84 69 | 59 84 76 51 58  5 54 83
+Card 5: 87 83 26 28 32 | 88 30 70 12 93 22 82 36
+Card 6: 31 18 13 56 72 | 74 77 10 23 35 67 36 11
+No exemplo acima, o cartão 1 tem cinco números vencedores ( 41, 48, 83, 86, e 17) e oito números que você tem ( 83, 86, 6, 31, 17, 9, 48, e 53). Dos números que você tem, quatro deles ( 48, 83, 17, e 86) são números vencedores! Isso significa que o cartão 1 vale 8pontos (1 para a primeira correspondência, então dobrado três vezes para cada uma das três correspondências após a primeira).
+
+O cartão 2 tem dois números vencedores ( 32e 61), portanto vale 2pontos.
+O cartão 3 tem dois números vencedores ( 1e 21), portanto vale 2pontos.
+O cartão 4 tem um número vencedor ( 84), então vale 1um ponto.
+O cartão 5 não tem números vencedores, então não vale pontos.
+O cartão 6 não tem números vencedores, então não vale pontos.
+Então, neste exemplo, a pilha de raspadinhas do Elfo vale 13pontos.
+
+Sente-se na grande pilha de cartas coloridas. Quantos pontos elas valem no total?

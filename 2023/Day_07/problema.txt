@@ -1,0 +1,51 @@
+--- Dia 7: Cartões de Camelo ---
+Sua viagem com todas as despesas pagas acaba sendo um passeio só de ida, de cinco minutos, em um dirigível . (Pelo menos é um dirigível legal !) Ele deixa você na beira de um vasto deserto e desce de volta para Island Island.
+
+"Você trouxe as peças?"
+
+Você se vira e vê um elfo completamente coberto de roupas brancas, usando óculos de proteção e montado em um grande camelo .
+
+"Você trouxe as peças?", ela pergunta novamente, mais alto dessa vez. Você não tem certeza de quais peças ela está procurando; você está aqui para descobrir por que a areia parou.
+
+"As partes! Para a areia, sim! Venha comigo; eu lhe mostrarei." Ela acena para você subir no camelo.
+
+Depois de cavalgar um pouco pelas areias da Ilha Deserta, você pode ver o que parecem ser pedras muito grandes cobrindo metade do horizonte. O Elfo explica que as pedras estão por toda a parte da Ilha Deserta que fica diretamente acima da Ilha Island, o que torna difícil até mesmo chegar lá. Normalmente, eles usam máquinas grandes para mover as pedras e filtrar a areia, mas as máquinas quebraram porque a Ilha Deserta parou recentemente de receber as peças necessárias para consertá-las.
+
+Você já assumiu que será seu trabalho descobrir por que as peças pararam quando ela perguntar se você pode ajudar. Você concorda automaticamente.
+
+Como a viagem levará alguns dias, ela se oferece para lhe ensinar o jogo Camel Cards . Camel Cards é meio parecido com pôquer , exceto que foi projetado para ser mais fácil de jogar enquanto se monta em um camelo.
+
+Em Camel Cards, você obtém uma lista de mãos , e seu objetivo é ordená-las com base na força de cada mão. Uma mão consiste em cinco cartas rotuladas como A, K, Q, J, T, 9, 8, 7, 6, 5, 4, 3, ou 2. A força relativa de cada carta segue esta ordem, onde Aé a mais alta e 2é a mais baixa.
+
+Cada mão é exatamente um tipo . Do mais forte ao mais fraco, eles são:
+
+Cinco de um tipo , onde todas as cinco cartas têm o mesmo rótulo:AAAAA
+Quadra , onde quatro cartas têm o mesmo rótulo e uma carta tem um rótulo diferente:AA8AA
+Full house , onde três cartas têm o mesmo rótulo e as duas cartas restantes compartilham um rótulo diferente:23332
+Três de um tipo , onde três cartas têm o mesmo rótulo e as duas cartas restantes são diferentes de qualquer outra carta na mão:TTT98
+Dois pares , onde duas cartas compartilham um rótulo, duas outras cartas compartilham um segundo rótulo e a carta restante tem um terceiro rótulo:23432
+Um par , onde duas cartas compartilham um rótulo, e as outras três cartas têm um rótulo diferente do par e entre si:A23A4
+Carta alta , onde todos os rótulos das cartas são distintos:23456
+As mãos são ordenadas principalmente com base no tipo; por exemplo, cada full house é mais forte do que qualquer trinca .
+
+Se duas mãos tiverem o mesmo tipo, uma segunda regra de ordenação entra em vigor. Comece comparando a primeira carta em cada mão . Se essas cartas forem diferentes, a mão com a primeira carta mais forte é considerada mais forte. Se a primeira carta em cada mão tiver o mesmo rótulo , no entanto, passe a considerar a segunda carta em cada mão . Se elas forem diferentes, a mão com a segunda carta mais alta vence; caso contrário, continue com a terceira carta em cada mão, depois a quarta, depois a quinta.
+
+Então, 33332e 2AAAAsão ambas mãos de quatro cartas iguais33332 , mas é mais forte porque sua primeira carta é mais forte. Similarmente, 77888e 77788são ambas um full house , mas 77888é mais forte porque sua terceira carta é mais forte (e ambas as mãos têm a mesma primeira e segunda carta).
+
+Para jogar Camel Cards, você recebe uma lista de mãos e seu lance correspondente (sua entrada de quebra-cabeça). Por exemplo:
+
+32T3K 765
+T55J5 684
+KK677 28
+KTJJT 220
+QQQJA 483
+Este exemplo mostra cinco mãos; cada mão é seguida por seu valor de lance . Cada mão ganha um valor igual ao seu lance multiplicado por sua classificação , onde a mão mais fraca obtém classificação 1, a segunda mão mais fraca obtém classificação 2, e assim por diante até a mão mais forte. Como há cinco mãos neste exemplo, a mão mais forte terá classificação 5 e seu lance será multiplicado por 5.
+
+Então, o primeiro passo é colocar as mãos em ordem de força:
+
+32T3Ké o único par e as outras mãos são todas de um tipo mais forte, então ele recebe classificação 1 .
+KK677e KTJJTambos são dois pares . As primeiras cartas têm o mesmo rótulo, mas a segunda carta KK677é mais forte ( Kvs T), então KTJJTobtém classificação 2 e KK677obtém classificação 3 .
+T55J5e QQQJAambos são três do mesmo tipo . QQQJAtem uma primeira carta mais forte, então ela ganha classificação 5 e T55J5ganha classificação 4 .
+Agora, você pode determinar os ganhos totais deste conjunto de mãos somando o resultado da multiplicação do lance de cada mão com sua classificação ( 765* 1 + 220* 2 + 28* 3 + 684* 4 + 483* 5). Então os ganhos totais neste exemplo são 6440.
+
+Encontre a classificação de cada mão no seu conjunto. Quais são os ganhos totais?

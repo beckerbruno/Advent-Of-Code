@@ -1,0 +1,31 @@
+--- Dia 8: Terra Assombrada ---
+Você ainda está andando de camelo pela Ilha Deserta quando vê uma tempestade de areia se aproximando rapidamente. Quando você se vira para avisar a Elfa, ela desaparece diante dos seus olhos! Para ser justo, ela tinha acabado de avisar sobre fantasmas alguns minutos atrás.
+
+Uma das bolsas do camelo está etiquetada como "mapas" - com certeza, está cheia de documentos (sua entrada de quebra-cabeça) sobre como navegar no deserto. Pelo menos, você tem certeza de que é isso que eles são; um dos documentos contém uma lista de instruções esquerda/direita, e o resto dos documentos parece descrever algum tipo de rede de nós etiquetados.
+
+Parece que você deve usar as instruções esquerda/direita para navegar na rede . Talvez se você fizer o camelo seguir as mesmas instruções, você pode escapar do deserto assombrado!
+
+Depois de examinar os mapas por um tempo, dois nós se destacam: AAAe ZZZ. Você sente que AAAé onde você está agora, e você tem que seguir as instruções esquerda/direita até chegar em ZZZ.
+
+Este formato define cada nó da rede individualmente. Por exemplo:
+
+RL
+
+AAA = (BBB, CCC)
+BBB = (DDD, EEE)
+CCC = (ZZZ, GGG)
+DDD = (DDD, DDD)
+EEE = (EEE, EEE)
+GGG = (GGG, GGG)
+ZZZ = (ZZZ, ZZZ)
+Começando com AAA, você precisa procurar o próximo elemento com base na próxima instrução esquerda/direita em sua entrada. Neste exemplo, comece com AAAe vá para a direita ( R) escolhendo o elemento direito de AAA, CCC. Então, Lsignifica escolher o elemento esquerdoCCC de , ZZZ. Seguindo as instruções esquerda/direita, você chega ZZZem 2etapas.
+
+Claro, você pode não encontrar ZZZimediatamente. Se você ficar sem instruções esquerda/direita, repita toda a sequência de instruções conforme necessário: RLrealmente significa RLRLRLRLRLRLRLRL...e assim por diante. Por exemplo, aqui está uma situação que leva 6etapas para alcançar ZZZ:
+
+LLR
+
+AAA = (BBB, BBB)
+BBB = (AAA, ZZZ)
+ZZZ = (ZZZ, ZZZ)
+Começando em AAA, siga as instruções esquerda/direita. Quantos passos são necessários para chegar a ZZZ?
+

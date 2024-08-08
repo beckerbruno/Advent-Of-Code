@@ -1,0 +1,94 @@
+--- Dia 5: Se você der um fertilizante a uma semente ---
+Você pega o barco e encontra o jardineiro exatamente onde lhe disseram que ele estaria: administrando um "jardim" gigante que para você mais parece uma fazenda.
+
+"Uma fonte de água? Ilha Ilha é a fonte de água!" Você aponta que Ilha da Neve não está recebendo água alguma.
+
+"Oh, tivemos que parar a água porque ficamos sem areia para filtrá -la! Não dá para fazer neve com água suja. Não se preocupe, tenho certeza de que teremos mais areia em breve; só desligamos a água por alguns dias... semanas... ah, não." Seu rosto afunda em um olhar de realização horrorizada.
+
+"Eu estava tão ocupado me certificando de que todos aqui tinham comida que eu esqueci completamente de verificar por que paramos de pegar mais areia! Tem uma balsa saindo em breve que está indo para aquela direção - é muito mais rápido que o seu barco. Você poderia, por favor, dar uma olhada?"
+
+Você mal tem tempo de concordar com esse pedido quando ele traz outro. "Enquanto você espera a balsa, talvez você possa nos ajudar com nosso problema de produção de alimentos . O último Island Island Almanac acabou de chegar e estamos tendo problemas para entendê-lo."
+
+O almanaque (sua entrada de quebra-cabeça) lista todas as sementes que precisam ser plantadas. Ele também lista que tipo de solo usar com cada tipo de semente, que tipo de fertilizante usar com cada tipo de solo, que tipo de água usar com cada tipo de fertilizante e assim por diante. Cada tipo de semente, solo, fertilizante e assim por diante é identificado com um número, mas os números são reutilizados por cada categoria - ou seja, solo 123e fertilizante 123não estão necessariamente relacionados um ao outro.
+
+Por exemplo:
+
+seeds: 79 14 55 13
+
+seed-to-soil map:
+50 98 2
+52 50 48
+
+soil-to-fertilizer map:
+0 15 37
+37 52 2
+39 0 15
+
+fertilizer-to-water map:
+49 53 8
+0 11 42
+42 0 7
+57 7 4
+
+water-to-light map:
+88 18 7
+18 25 70
+
+light-to-temperature map:
+45 77 23
+81 45 19
+68 64 13
+
+temperature-to-humidity map:
+0 69 1
+1 0 69
+
+humidity-to-location map:
+60 56 37
+56 93 4
+O almanaque começa listando quais sementes precisam ser plantadas: sementes 79, 14, 55, e 13.
+
+O restante do almanaque contém uma lista de mapas que descrevem como converter números de uma categoria de origem em números em uma categoria de destino . Ou seja, a seção que começa com seed-to-soil map:descreve como converter um número de semente (a origem) em um número de solo (o destino). Isso permite que o jardineiro e sua equipe saibam qual solo usar com quais sementes, qual água usar com qual fertilizante e assim por diante.
+
+Em vez de listar cada número de origem e seu número de destino correspondente um por um, os mapas descrevem intervalos inteiros de números que podem ser convertidos. Cada linha dentro de um mapa contém três números : o início do intervalo de destino , o início do intervalo de origem e o comprimento do intervalo .
+
+Considere novamente o exemplo seed-to-soil map:
+
+50 98 2
+52 50 48
+A primeira linha tem um início de intervalo de destino de 50, um início de intervalo de origem de 98, e um comprimento de intervalo de 2. Esta linha significa que o intervalo de origem começa em 98e contém dois valores: 98e 99. O intervalo de destino tem o mesmo comprimento, mas começa em 50, então seus dois valores são 50e 51. Com essas informações, você sabe que o número de sementes 98corresponde ao número do solo 50e que o número de sementes 99corresponde ao número do solo 51.
+
+A segunda linha significa que o intervalo de origem começa em 50e contém 48valores: 50, 51, ..., 96, 97. Isso corresponde a um intervalo de destino começando em 52e também contendo 48valores: 52, 53, ..., 98, 99. Portanto, o número de sementes 53corresponde ao número de solo 55.
+
+Quaisquer números de origem que não sejam mapeados correspondem ao mesmo número de destino. Então, o número de semente 10corresponde ao número de solo 10.
+
+Então, a lista completa de números de sementes e seus números de solo correspondentes fica assim:
+
+seed  soil
+0     0
+1     1
+...   ...
+48    48
+49    49
+50    52
+51    53
+...   ...
+96    98
+97    99
+98    50
+99    51
+Com este mapa, você pode consultar o número de solo necessário para cada número inicial de sementes:
+
+O número de sementes 79corresponde ao número de solo 81.
+O número de sementes 14corresponde ao número de solo 14.
+O número de sementes 55corresponde ao número de solo 57.
+O número de sementes 13corresponde ao número de solo 13.
+O jardineiro e sua equipe querem começar o mais rápido possível, então eles gostariam de saber o local mais próximo que precisa de uma semente. Usando esses mapas, encontre o menor número de local que corresponde a qualquer uma das sementes iniciais . Para fazer isso, você precisará converter cada número de semente por meio de outras categorias até encontrar seu número de local correspondente . Neste exemplo, os tipos correspondentes são:
+
+Semente 79, solo 81, fertilizante 81, água 81, luz 74, temperatura 78, umidade 78, localização82 .
+Semente 14, solo 14, fertilizante 53, água 49, luz 42, temperatura 42, umidade 43, localização43 .
+Semente 55, solo 57, fertilizante 57, água 53, luz 46, temperatura 82, umidade 82, localização86 .
+Semente 13, solo 13, fertilizante 52, água 41, luz 34, temperatura 34, umidade 35, localização35 .
+Então, o menor número de localização neste exemplo é 35.
+
+Qual é o menor número de localização que corresponde a qualquer um dos números iniciais?
