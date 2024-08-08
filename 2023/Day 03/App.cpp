@@ -10,7 +10,13 @@
 #include <sstream> // Para std::istringstream   
 
 // #define DEBUG
+<<<<<<< Updated upstream
 #define LINHAS
+// #define VALID
+=======
+// #define LINHAS
+#define VALORES
+>>>>>>> Stashed changes
 
 using namespace std;
 
@@ -25,7 +31,11 @@ int main() {
     std::map <std::pair<int, int>, char> simb2;
     std::map <std::pair<int, int>, std::string> matriz;
 
-    arq.open("Input.txt", ios::in); // Abre arquivo
+<<<<<<< Updated upstream
+    arq.open("inputP2.txt", ios::in); // Abre arquivo
+=======
+    arq.open("input.txt", ios::in); // Abre arquivo
+>>>>>>> Stashed changes
 
     if (!arq.is_open()) {             // Se houver erro, sai do programa
         cerr << "Erro ao abrir o arquivo!" << endl;
@@ -38,23 +48,24 @@ int main() {
     int jaux = 0;
     while (getline(arq, line)) {    // enquanto houver linhas no arquivo
         #ifdef LINHAS
-            cout << "\nChamando a linha " << jaux << " --| " << line << " |--| ";
+            cout << "\nLinha " << jaux << " --| " << line << " |--> ";
         #endif
         string number = "";
         vector<char> linhaMatriz;
         for (int i = 0; i < line.length(); i++) {
             char caractere = line[i];
             linhaMatriz.push_back(caractere);
-            #ifdef DEBUG
-                cout << linhaMatriz[i] << " ";
+            #ifdef LINHAS
+                cout << linhaMatriz[i];
             #endif
             if (isdigit(caractere)){                          //  se for um numero, adiciona a posicao e o caractere
                 positions.push_back({i, jaux});
                 number = number + caractere;
             }
-            if (!isdigit(caractere) && number != ""){         //  se nao for um numero, mas tiver algo nos numeros, preenche os valores de map
+            if ((!isdigit(caractere) || i == line.length() - 1) && number != ""){         //  se nao for um numero, mas tiver algo nos numeros, preenche os valores de map
                 for (const auto& position : positions) {
                     matriz[{position[0], position[1]}] = number;
+                    // cout << "Numero adicionado: " << number << endl;
                 }
                 number.clear();
                 positions.clear();
@@ -84,21 +95,32 @@ int main() {
     //--------------------------------------------------------------
     //                    ACESSANDO A MATRIZ
     //--------------------------------------------------------------
+<<<<<<< Updated upstream
+    int cont = 0;
     for ( int i = 0; i < MatrizAdj.size(); i++) {                // i para cada linha
-        #ifdef LINHAS
-            cout << endl;
-        #endif
         for ( int j = 0; j < MatrizAdj[i].size(); j++) {         // j para cada coluna
+=======
+    
+    #ifdef VALORES
+        cout << endl;
+        cout << endl;
+    #endif
+    int cont = 0;
+    int const numLinhas = MatrizAdj.size();
+    for ( int i = 0; i < numLinhas; i++) {                // i para cada linha
+        int const numColunas = MatrizAdj[i].size();
+        for ( int j = 0; j < numColunas; j++) {         // j para cada coluna
+>>>>>>> Stashed changes
             if( isdigit(MatrizAdj[i][j]) ){                      // se é numero
                 #ifdef DEBUG
-                    // cout << " " << MatrizAdj[i][j];
+                    cout << " " << MatrizAdj[i][j];
                 #endif                
                 //--------------------------------------------------------------    .1   .2   .3
                 //          VERIFICANDO SE O DIGITO É VALIDO                        .4   ij   .6
                 //--------------------------------------------------------------    .7   .8   .9
-                
+                // 
                 //------------------------------------ LINHA 1 ^ ---------------
-                if ( i > 0 && j > 0 ) { 
+                if ( i > 0 && j > 0 ) {         // se for o primeiro da linha e da coluna
                     // cout << ".1";
                     if (MatrizAdj[i-1][j-1] != '.' && !isdigit(MatrizAdj[i-1][j-1]) ){
                         isValid = 1;
@@ -110,7 +132,7 @@ int main() {
                         isValid = 1;
                     }
                 }
-                if ( i > 0 && j < MatrizAdj[i].size() - 1 ) { 
+                if ( i > 0 && j < numColunas - 1 ) { 
                     // cout << ".3";
                     if (MatrizAdj[i-1][j+1] != '.' && !isdigit(MatrizAdj[i-1][j+1]) ){
                         isValid = 1;
@@ -124,7 +146,7 @@ int main() {
                         isValid = 1;
                     }
                 }
-                if ( j < MatrizAdj[i].size() - 1 ) { 
+                if ( j < numColunas - 1 ) { 
                     // cout << ".6";
                     if ( MatrizAdj[i][j+1] != '.' && !isdigit(MatrizAdj[i][j+1]) ){
                         isValid = 1;
@@ -132,19 +154,19 @@ int main() {
                 }
                 
                 //------------------------------------ LINHA 3 _ ---------------
-                if ( i < MatrizAdj.size() - 1 && j > 0 ) { 
+                if ( i < numLinhas - 1 && j > 0 ) { 
                     // cout << ".7";
                     if ( MatrizAdj[i+1][j-1] != '.' && !isdigit(MatrizAdj[i+1][j-1]) ){
                         isValid = 1;
                     }
                 }
-                if ( i < MatrizAdj.size() - 1 ) { 
+                if ( i < numLinhas - 1 ) { 
                     // cout << ".8";
                     if ( MatrizAdj[i+1][j]   != '.' && !isdigit(MatrizAdj[i+1][j]) ){
                         isValid = 1;
                     }
                 }
-                if ( i < MatrizAdj.size() - 1 && j < MatrizAdj[i].size() - 1 ) { 
+                if ( i < numLinhas - 1 && j < numColunas - 1 ) { 
                     // cout << ".9";
                     if ( MatrizAdj[i+1][j+1] != '.' && !isdigit(MatrizAdj[i+1][j+1]) ){
                         isValid = 1;
@@ -152,31 +174,69 @@ int main() {
                 }
         
                 //--------------------------------------------------------------
-                //          ADICIONANDO NUMERO COMPLETO A SAÍDA
+                //        ADICIONANDO NUMERO COMPLETO A SAÍDA erro possivelmente aqui, se tiver dois repetidos 
                 //--------------------------------------------------------------
                 
                 if ( isValid ){
                     string valor = matriz[{j, i}];
+                    int aux_i = 0;
+                    int aux_j = 0;
+                    
                     int soma = stoi(valor);
                     if (output.empty() || output.back() != valor) {
                         output.push_back(valor);
+<<<<<<< Updated upstream
+                        #ifdef VALID
                         cout << " V." << valor;
+                        #endif
                         somaFinal = somaFinal + soma;
+                        cont = 0;
                     }else{
+                        if ( cont > 1 ){
+                            cout << "\nto aqui" << valor << endl;
+                        }
+                        #ifdef VALID
                         cout << " #dup." << valor;
+=======
+                        #ifdef VALORES
+                        cout << " +V_" << valor;
+                        #endif
+                        somaFinal = somaFinal + soma;
+                        aux_i = i;
+                        aux_j = j;
+                        cont = 0;
+                    }else{
+                        if (cont > 1) { cout << "\nto aqui " << valor << endl;}
+                        #ifdef VALORES
+                        cout << " #dup_" << valor;
+>>>>>>> Stashed changes
+                        #endif
+                        cont++;
                     }
                 }
                 isValid = 0;
             }
         }
     }
-    cout << "Esperados: 276 958 742 714 612 304 175 346 997 923 256 122 746 76 332 111 204 396 357 438 694 154 859 496 598 810 816 713 802 344 671 388 152 141 73 719 526 830 943 877 67 502" << endl;
+<<<<<<< Updated upstream
+    // cout << "Esperados: 276 958 742 714 612 304 175 346 997 923 256 122 746 76 332 111 204 396 357 438 694 154 859 496 598 810 816 713 802 344 671 388 152 141 73 719 526 830 943 877 67 502" << endl;
     cout << "\nValores validos " << endl;
+=======
+    cout << "\n\n--------------------------------" << endl;
+    // inputP1
+    // cout << "Esperados: 467 35 633 617 592 755 664 598 " << endl;
+    // inputP2
+    // cout << "Esperados: 276 958 742 714 612 304 175 346 997 923 256 122 746 76 332 111 204 396 357 438 694 154 859 496 598 810 816 713 802 344 671 388 152 141 73 719 526 830 943 877 67 502" << endl;
+    // inputP3
+    // cout << "Esperados: 276 958 742 714 574 833 159 297 612 304 175 890 346 997 923 253 122 746 832 766 432 229 674 415 76 332 111 720 204 396 357 438 694 154 26 422 200 201 859 496 598 810 816 713 802 540 344 671 467 388 152 141 73 719 526 830 943 541 624 781 150 966 877 67 859 502 425 778 142 569 563 57 786 255 638 979 704 181 560 939 194 675 741 681 882 714 741 650 374 542 344 340 799 990 733 811 8 844 660 937 227 775 24 146 983 822 898 611 693 328 254 582 528 359 536 889 9 193 382 450 795 988" << endl;
+    cout << "Validos:   ";
+>>>>>>> Stashed changes
     for (int i = 0; i < output.size(); ++i) {
         cout << output[i] << " ";
     }
 
     cout << "\nSoma Final: " << somaFinal << endl;
+    cout << "--------------------------------" << endl;
     
     if (arq.bad()) {
         cerr << "Erro fatal!" << endl;
