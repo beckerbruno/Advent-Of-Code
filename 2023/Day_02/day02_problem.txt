@@ -1,0 +1,50 @@
+--- Dia 2: Enigma do Cubo ---
+Você é lançado alto na atmosfera! O ápice de sua trajetória mal alcança a superfície de uma grande ilha flutuando no céu. Você pousa suavemente em uma pilha fofa de folhas. Está muito frio, mas não se vê muita neve. Um Elfo corre para cumprimentá-lo.
+
+O Elfo explica que você chegou na Ilha da Neve e pede desculpas pela falta de neve. Ele ficará feliz em explicar a situação, mas é um pouco difícil, então você tem algum tempo. Eles não recebem muitos visitantes aqui; você gostaria de jogar enquanto isso?
+
+Conforme você caminha, o Elfo mostra uma pequena sacola e alguns cubos vermelhos, verdes ou azuis. Cada vez que você jogar este jogo, ele esconderá um número secreto de cubos de cada cor na sacola, e seu objetivo é descobrir informações sobre o número de cubos.
+
+Para obter informações, assim que uma sacola estiver carregada com cubos, o Elfo irá enfiar a mão na sacola, pegar um punhado de cubos aleatórios, mostrá-los a você e colocá-los de volta na sacola. Ele fará isso algumas vezes por jogo.
+
+Você joga vários jogos e registra as informações de cada jogo (sua entrada no quebra-cabeça). Cada jogo é listado com seu número de ID (como em 11) Game 11: ...seguido por uma lista separada por ponto e vírgula de subconjuntos de cubos que foram revelados da sacola (como 3 red, 5 green, 4 blue).
+
+Por exemplo, o registro de alguns jogos pode ficar assim:
+
+Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
+Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
+Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red
+Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
+Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green
+No jogo 1, três conjuntos de cubos são revelados do saco (e depois colocados de volta). O primeiro conjunto contém 3 cubos azuis e 4 cubos vermelhos; o segundo conjunto é 1 cubo vermelho, 2 cubos verdes e 6 cubos azuis; o terceiro conjunto contém apenas 2 cubos verdes.
+
+O Elfo gostaria primeiro de saber quais jogos seriam possíveis se a sacola contivesse apenas 12 cubos vermelhos, 13 cubos verdes e 14 cubos azuis ?
+
+No exemplo acima, os jogos 1, 2 e 5 teriam sido possíveis se a sacola tivesse sido carregada com essa configuração. No entanto, o jogo 3 teria sido impossível porque a certa altura o Elfo mostrou 20 cubos vermelhos de uma vez; da mesma forma, o jogo 4 também teria sido impossível porque o Elfo mostrou 15 cubos azuis de uma vez. Se você somar os IDs dos jogos que seriam possíveis, você obtém 8.
+
+Determine quais jogos seriam possíveis se a sacola estivesse carregada com apenas 12 cubos vermelhos, 13 cubos verdes e 14 cubos azuis. Qual é a soma dos IDs desses jogos?
+
+A resposta do seu quebra-cabeça foi 1931.
+
+A primeira metade deste quebra-cabeça está completa! Fornece uma estrela dourada: *
+
+--- Parte dois ---
+O Elfo diz que eles pararam de produzir neve porque não estão recebendo água ! Ele não sabe por que a água parou; no entanto, ele pode mostrar como chegar à fonte de água para verificar você mesmo. Está logo à frente!
+
+À medida que você continua sua caminhada, o Elfo faz uma segunda pergunta: em cada jogo que você jogou, qual é o menor número de cubos de cada cor que poderiam estar na sacola para tornar o jogo possível?
+
+Considere novamente os exemplos de jogos anteriores:
+
+Game 1: 3 blue, 4 red; 1 red, 2 green, 6 blue; 2 green
+Game 2: 1 blue, 2 green; 3 green, 4 blue, 1 red; 1 green, 1 blue
+Game 3: 8 green, 6 blue, 20 red; 5 blue, 4 red, 13 green; 5 green, 1 red
+Game 4: 1 green, 3 red, 6 blue; 3 green, 6 red; 3 green, 15 blue, 14 red
+Game 5: 6 red, 1 blue, 3 green; 2 blue, 1 red, 2 green
+No jogo 1, o jogo poderia ter sido jogado com apenas 4 cubos vermelhos, 2 verdes e 6 cubos azuis. Se qualquer cor tivesse um cubo a menos, o jogo teria sido impossível.
+O jogo 2 poderia ter sido jogado com um mínimo de 1 cubo vermelho, 3 verdes e 4 cubos azuis.
+O jogo 3 deve ter sido jogado com pelo menos 20 cubos vermelhos, 13 verdes e 6 azuis.
+O jogo 4 exigia pelo menos 14 cubos vermelhos, 3 verdes e 15 cubos azuis.
+O jogo 5 precisava de nada menos que 6 cubos vermelhos, 3 verdes e 2 azuis no saco.
+A potência de um conjunto de cubos é igual ao número de cubos vermelhos, verdes e azuis multiplicados. A potência do conjunto mínimo de cubos no jogo 1 é 48. Nos jogos 2-5 foi 12, 1560, 630, e 36, respectivamente. A soma dessas cinco potências produz a soma 2286.
+
+Para cada jogo, encontre o conjunto mínimo de cubos que deveriam estar presentes. Qual é a soma das potências desses conjuntos?
